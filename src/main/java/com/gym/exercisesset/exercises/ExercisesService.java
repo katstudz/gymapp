@@ -1,10 +1,9 @@
 package com.gym.exercisesset.exercises;
 
-import lombok.AllArgsConstructor;
+import com.gym.exercisesset.model.Exercise;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 @Slf4j
@@ -14,6 +13,7 @@ public class ExercisesService {
     private  ExerciseRepository exerciseRepository;
     @Autowired
     ExercisesService(ExerciseRepository exerciseRepository){
+        this.exerciseRepository = exerciseRepository;
         Exercise squats = Exercise.builder()
                 .description("Przysiad jest ćwiczeniem siłowym, w którym uczestnik" +
                         " opuszcza biodra z pozycji stojącej, a następnie wstaje.")
