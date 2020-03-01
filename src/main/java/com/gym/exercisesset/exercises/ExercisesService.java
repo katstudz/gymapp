@@ -1,16 +1,20 @@
 package com.gym.exercisesset.exercises;
 
 import com.gym.exercisesset.model.Exercise;
+import com.gym.exercisesset.repository.ExerciseRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Optional;
+
 @Slf4j
 @Service
 @RequiredArgsConstructor
 public class ExercisesService {
-    private  ExerciseRepository exerciseRepository;
+    private ExerciseRepository exerciseRepository;
     @Autowired
     ExercisesService(ExerciseRepository exerciseRepository){
         this.exerciseRepository = exerciseRepository;
@@ -32,9 +36,12 @@ public class ExercisesService {
         exerciseRepository.save(pumps);
     }
 
-    public void getAll() {
-        var  all = exerciseRepository.findAll();
-        log.info(all.toString());
+    public List<Exercise> getAll() {
+        return exerciseRepository.findAll();
+    }
+
+    public Optional<Exercise> findExerciseByName(String name){
+        return exerciseRepository.findByName(name);
     }
 
 //    @Scheduled(fixedDelay = 1000)

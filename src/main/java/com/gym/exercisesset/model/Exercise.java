@@ -11,7 +11,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @ToString
 @AllArgsConstructor
 public class Exercise {
-    @Id ObjectId id;    private String name;
+    @Id ObjectId id;
+    private String name;
     private String description;
     private String youtubeSource;
 }
