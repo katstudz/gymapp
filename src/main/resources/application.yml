@@ -7,3 +7,7 @@ spring:
       repositories:
         type: auto
       database: mongo
+
+mail:
+  address: "test01032020qwer@wp.pl"
+  password: "supertestExtra"

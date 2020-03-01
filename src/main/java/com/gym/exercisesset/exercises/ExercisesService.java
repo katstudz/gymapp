@@ -19,16 +19,12 @@ public class ExercisesService {
     ExercisesService(ExerciseRepository exerciseRepository){
         this.exerciseRepository = exerciseRepository;
         Exercise squats = Exercise.builder()
-                .description("Przysiad jest ćwiczeniem siłowym, w którym uczestnik" +
-                        " opuszcza biodra z pozycji stojącej, a następnie wstaje.")
                 .name("przysiady")
                 .youtubeSource("https://www.youtube.com/watch?v=gC2JDbEuwOI")
                 .build();
         exerciseRepository.save(squats);
 
         Exercise pumps = Exercise.builder()
-                .description("popularna nazwa ćwiczenia fizycznego wykonywanego w pozycji poziomej, " +
-                        "twarzą do ziemi, polegającego na podnoszeniu i obniżaniu tułowia")
                 .name("pompki")
                 .youtubeSource("https://www.youtube.com/watch?v=boSpmZZp74U")
                 .build();
