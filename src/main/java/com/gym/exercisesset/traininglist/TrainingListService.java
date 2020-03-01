@@ -4,7 +4,7 @@ import com.gym.exercisesset.exception.NoExerciseWithSelectedName;
 import com.gym.exercisesset.exercises.ExercisesService;
 import com.gym.exercisesset.model.Exercise;
 import com.gym.exercisesset.model.Training;
-import com.gym.exercisesset.sender.MailSender;
+import com.gym.exercisesset.sender.mail.MailSender;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

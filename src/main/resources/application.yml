@@ -9,5 +9,5 @@ spring:
       database: mongo
 
 mail:
-  address: "test01032020qwer@wp.pl"
+  address: "test123456super@gmail.com"
   password: "supertestExtra"

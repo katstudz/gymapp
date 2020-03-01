@@ -25,8 +25,12 @@
             <version>3.17</version>
         </dependency>
 
-        <!-- Used to work with the newer excel file format - `.xlsx` -->
-        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+            <version>2.0.1.RELEASE</version>
+        </dependency>
+
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
